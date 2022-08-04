@@ -277,6 +277,7 @@ func (e *echoHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			fmt.Printf("Failed to extract body: %s", err)
 			req.Error = err
 		} else {
+			fmt.Print(body)
 			req.Body = body
 		}
 	}
