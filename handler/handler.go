@@ -97,7 +97,7 @@ var (
 )
 
 func (e *echoHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-
+	fmt.Println("Request")
 	h := r.Header
 	//echo request
 	req := request{
@@ -225,6 +225,7 @@ func (e *echoHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			}
 			continue
 		}
+		fmt.Printf("%s:%s\n", k, v)
 		req.Headers[k] = v
 	}
 
