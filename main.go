@@ -26,7 +26,7 @@ func main() {
 	certpem := getEnv("CERT_FILE", "certs/cert.pem")
 	keypem := getEnv("KEY_FILE", "certs/key.pem")
 
-	flag.StringVar(&tlscert, "tlsCertFile", certpem, "File contaains the X509 Certificate for HTTPS")
+	flag.StringVar(&tlscert, "tlsCertFile", certpem, "File contains the X509 Certificate for HTTPS")
 	flag.StringVar(&tlskey, "tlsKeyFile", keypem, "File containing the X509 private key")
 	flag.IntVar(&port, "port", 443, "http port")
 	flag.BoolVar(&secure, "secure", true, "use tls")
